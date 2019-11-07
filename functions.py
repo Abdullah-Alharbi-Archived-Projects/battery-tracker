@@ -56,6 +56,8 @@ def watchLowerHigher():
                 toaster.show_toast("Battery Tracker",
                                    '{}%, enough.'.format(percent))
 
+        sleep(60)  # wtach batery each minute
+
 
 def watchHourly(SECS):
     count = 0
