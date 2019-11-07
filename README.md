@@ -9,9 +9,9 @@ battery tracker for windows 10 in python
 ---
 
 ## 🤔 how to install ?
-1- you need to download python 3.7
-2- install some packages using `pip` which comes with python:
+1. you need to download python 3.7
+2. install some packages using `pip` which comes with python:
 ```
 $ pip install psutil win10toast
 ```
-3- run `start.bat`
+3. run `start.bat`
