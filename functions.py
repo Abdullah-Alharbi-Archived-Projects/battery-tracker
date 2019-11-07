@@ -6,37 +6,34 @@ from threading import Thread
 toaster = ToastNotifier()
 
 
-def check(msg, plugged, percent):
+def check(plugged, percent):
     if plugged == False:
-        msg = 'Not Plugged In'
 
         if int(percent) <= 15:
             toaster.show_toast("Battery Tracker",
-                               '{}%, {}. need juice'.format(percent, msg))
+                               '{}%, Not Plugged In. need juice'.format(percent))
 
         if int(percent) > 90:
             toaster.show_toast("Battery Tracker",
-                               '{}%, good.'.format(percent))
+                               '{}%, Not Plugged In. good.'.format(percent))
 
         if int(percent) > 80:
             toaster.show_toast("Battery Tracker",
-                               '{}%, still good.'.format(percent))
+                               '{}%, Not Plugged In. still good.'.format(percent))
 
         if int(percent) < 80 and int(percent) > 50:
             toaster.show_toast("Battery Tracker",
-                               '{}%, fine.'.format(percent))
+                               '{}%, Not Plugged In. fine.'.format(percent))
 
     else:
-        msg = 'Plugged In'
-
         if int(percent) > 90:
             msg[1] = '{}%, enough.'.format(percent)
             toaster.show_toast("Battery Tracker",
-                               '{}%, {}, enough.'.format(percent, msg))
+                               '{}%, Plugged In. enough.'.format(percent, msg))
 
         if int(percent) > 80:
             toaster.show_toast("Battery Tracker",
-                               '{}%, almost there.'.format(percent))
+                               '{}%, Plugged In. almost there.'.format(percent))
 
 
 def getBattery():
