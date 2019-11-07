@@ -61,11 +61,10 @@ def watchHourly(SECS):
     count = 0
 
     while True:
-        msg = ''
         count = count + 1
         sleep(SECS)
         plugged, percent = getBattery()
-        check(msg, plugged, percent)
+        check(plugged, percent)
 
         print('executed: {}.'.format(count))
 
