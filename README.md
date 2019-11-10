@@ -15,3 +15,8 @@ battery tracker for windows 10 in python
 $ pip install psutil win10toast
 ```
 3. run `start.bat`
+
+## Todo:
+- [ ] support linux 
+
+
